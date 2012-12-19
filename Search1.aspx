@@ -26,7 +26,9 @@
 
     <asp:Panel ID="SearchPanel" runat="server" CssClass="CustomPanel" Visible="false">
         <%--<asp:Label ID="SearchLabel" runat="server" CssClass="Label" Text="Harbour Number:"></asp:Label>--%>
-        <asp:ComboBox ID="SearchComboBox" runat="server" CssClass="ComboBox" DropDownStyle="DropDownList" AutoCompleteMode="SuggestAppend"></asp:ComboBox>
+        <asp:ComboBox ID="SearchComboBox" runat="server" CssClass="ComboBox" 
+            DropDownStyle="DropDownList" AutoCompleteMode="SuggestAppend" 
+            AutoPostBack="True"></asp:ComboBox>
         <asp:Button ID="SearchButton" runat="server" OnClick="SearchButton_Click" ToolTip="Run Search" Text="Go" />
     </asp:Panel>
    

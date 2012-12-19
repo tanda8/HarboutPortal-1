@@ -33,6 +33,8 @@ Project: HarbourPortalNew
 **************************************************************************************
 ** Search Problem
 
+RESOLVED -> enabled AutoPostBack on Search1.aspx ComboBox control
+
 Page: Search1
 
 ToDO
@@ -60,31 +62,60 @@ Search Dropdown Dup Problem
 		LANCOME 02-260-4425
 * moen
   * Consignee Reference Number   (many dups)
-		10001
-		10018
-		10072
+
+		10001 -> AF15341	rqr_rqbk_id = 9222
+		10001 -> AF15341	rqr_rqbk_id = 9171
+		10001 -> AF15341	rqr_rqbk_id = 9447
+		10001 -> AF15341	rqr_rqbk_id = 9392
+		10001 -> AF15341	rqr_rqbk_id = 9400
+
+		10018 -> AF15352	rqr_rqbk_id = 9697
+		10018 -> AF15352	rqr_rqbk_id = 9507
+		10018 -> AF15352	rqr_rqbk_id = 9536
+		10018 -> AF15352	rqr_rqbk_id = 9533
+		10018 -> AF15352	rqr_rqbk_id = 9644
+		10018 -> AF15352	rqr_rqbk_id = 9566
+		10018 -> AF15352	rqr_rqbk_id = 9400
+		10018 -> AF15352	rqr_rqbk_id = 9636
+
+		10072 -> AF15361
+		10072 -> AF15361
+		10072 -> AF15361
+		10072 -> AF15361
+		10072 -> AF15361
+		10072 -> AF15361
+		10072 -> AF15361
+		10072 -> AF15361
+
 		10155
 		10193
 		12737
 		12741
-		PR0271
+
+		3891 -> H50170	s/b H50170
+		3891 -> H50170	s/b H50203
+		3891 -> H50170	s/b H50318
+		3891 -> H50170	s/b H50370
+		3891 -> H50170	s/b H50497
+		3891 -> H50170	s/b H50541
+		3891 -> H50170	s/b H50545
+		...
+
+		PR0271 -> AF15361 -> Ref# 05-3420	rqr_rqbk_id = 9586
+		PR0271 -> H57891 -> 05-3400			rqr_rqbk_id = 9644
+		PR0271 -> H57931 -> 05-3468			rqr_rqbk_id = 9610
+		PR0271 -> H57937 -> 05-3475			rqr_rqbk_id = 9636
+
 		RETURN
 		RETURN GOODS
 		Return Goods
 		Returns
 		SPOUTS
 		SS0001
-		SS001
 
-* Analysis
-PR0271 -> AF15361 -> Ref# 05-3420
-PR0271 -> H57891 -> 05-3400
-PR0271 -> H57931 -> 05-3468
-PR0271 -> H57937 -> 05-3475
-SS001 -> H50203 -> 02-2557
-SS001 -> H50545 -> 02-3507
-SS001 -> H50589 -> 02-3550
-
+		SS001 -> H50203 -> 02-2557	rqr_rqbk_id = 938
+		SS001 -> H50545 -> 02-3507	rqr_rqbk_id = 589
+		SS001 -> H50589 -> 02-3550	rqr_rqbk_id = 982
 
 **************************************************************************************
 ** ToDo
