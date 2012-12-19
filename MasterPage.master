@@ -1,0 +1,94 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>
+        <%: Page.Title %>
+        - Harbour Portal </title>
+    <link href="~/StyleSheet.css" rel="stylesheet" type="text/css" />
+    <link href="~/Images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">
+    <header>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p>
+                    <a runat="server" href="~/">
+                        <img src="Images/HarbourLogo.jpg" alt="" title="Return to Home Page" /></a>
+                </p>
+            </div>
+            <div class="float-right">
+                <section id="login">
+                    <asp:LoginView runat="server" ViewStateMode="Enabled">
+                        <AnonymousTemplate>
+                            <ul>
+                                <li><a runat="server" href="~/Login.aspx">Login</a></li>
+                            </ul>
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            <p>
+                                Welcome,
+                                <asp:LoginName runat="server" CssClass="username" />
+                                <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Logout" LogoutPageUrl="~/Logout.aspx" />
+                            </p>
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+                </section>
+                <nav>
+                    <ul id="menu" runat="server">
+                        <li><a runat="server" href="~/">Home</a></li>
+                        <li><a runat="server" href="~/Overview.aspx">Overview</a></li>
+                        <li><a runat="server" href="~/Search1.aspx">Search</a></li>
+                        <li><a runat="server" href="~/Profile.aspx">Profile</a></li>
+                        <li><a runat="server" href="~/Contact.aspx">Contact</a></li>
+                        <li><a runat="server" href="~/Help.aspx">Help</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="float-right">
+                <ul id="social">
+                    <li><a href="http://www.facebook.com/pages/Harbour-International-Inc/147097422053030"
+                        target="_blank" class="facebook" title="Facebook">Facebook</a></li>
+                    <li><a href="http://twitter.com/#!/HarbourIntl" target="_blank" class="twitter" title="Twitter">
+                        Twitter</a></li>
+                    <li><a href="http://harbouronline.com/index.php?id=14" target="_blank" class="blog"
+                        title="Harbour Blog">Blog</a></li>
+                    <li><a href="http://harbouronline.com" target="_blank" class="harbour" title="Harbour Online">
+                        Harbour</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div id="body">
+        <section class="content-wrapper main-content clear-fix">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </section>
+    </div>
+    <footer>
+        <div class="content-wrapper">
+            <ul>
+                <li>Harbour International Inc.</li>
+                <li>30 Shumway Avenue</li>
+                <li>Batavia, Illinois 60510, USA</li>
+            </ul>
+            <ul>
+                <li>Telephone: (630) 879-8800</li>
+                <li>Facsimile: (630) 879-8933</li>
+                <li>Email: sales@harbouronline.com</li>
+            </ul>
+            <ul>
+                <li>&copy;
+                    <%: DateTime.Now.Year %>
+                    - Harbour International</li>
+                <li>Web design by <a href="http://www.karanet.com" target="_blank" title="Karabowicz & Associates" >Karanet</a></li>
+            </ul>
+        </div>
+    </footer>
+    </form>
+</body>
+</html>
