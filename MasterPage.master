@@ -42,7 +42,7 @@
                     <ul id="menu" runat="server">
                         <li><a runat="server" href="~/">Home</a></li>
                         <li><a runat="server" href="~/Overview.aspx">Overview</a></li>
-                        <li><a runat="server" href="~/Search1.aspx">Search</a></li>
+                        <li><a runat="server" href="~/Search2.aspx">Search</a></li>
                         <li><a runat="server" href="~/Profile.aspx">Profile</a></li>
                         <li><a runat="server" href="~/Contact.aspx">Contact</a></li>
                         <li><a runat="server" href="~/Help.aspx">Help</a></li>
