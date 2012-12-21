@@ -25,7 +25,7 @@
     </asp:Panel> 
 
     <asp:Panel ID="SearchPanel" runat="server" CssClass="CustomPanel" Visible="false">
-        <%--<asp:Label ID="SearchLabel" runat="server" CssClass="Label" Text="Harbour Number:"></asp:Label>--%>
+        <asp:Label runat="server" CssClass="labelType1" AssociatedControlID="SearchComboBox" Text="Search Value:"></asp:Label>
         <asp:ComboBox ID="SearchComboBox" runat="server" CssClass="ComboBox" 
             DropDownStyle="DropDownList" AutoCompleteMode="SuggestAppend" 
             AutoPostBack="True"></asp:ComboBox>

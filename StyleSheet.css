@@ -593,6 +593,8 @@ fieldset input[type="submit"]
     float: left; 
     /*width:auto;*/
     clear: both;
+    /* width: 80%;*/
+    padding-left: 30px;
 }
 
 .searchPanel .labelType1
@@ -606,66 +608,19 @@ fieldset input[type="submit"]
     min-width: 140px;
 }
 
-.searchPanel .labelType2
-{
-    float: left;
-    /*clear: both;*/
-    padding: 3px;
-    font-weight: 600;
-    margin-left: 20px;
-    /*min-width: 135px;*/
-}
 .searchPanel .dropDownList
 {
     float: left;
-    padding: 3px;    
-    /*clear: both;*/
+    padding: 3px;   
+    clear: both;
     /*padding: 2px 4px 2px 4px;*/
     /*font-weight: 600;*/
     /*min-width: 135px;*/
+    /*background-color: #ADD8E6;*/
+    border: solid 3px #2e8dcc;
+    /*border-right: 0px none;*/
 }
 
-/*.searchPanel .comboBox
-{
-    float: left;
-    padding: 3px;
-    
-}*/
-
-.searchPanel .searchButton
-{    
-    float: left;
-    padding: 2px 4px 2px 4px;    
-    margin-left: 8px;    
-}
-
-.searchPanel .ComboBox .ajax__combobox_textboxcontainer 
-{
-    float: left;
-    padding: 3px;
-    background-color: #ADD8E6;
-    border: solid 1px Blue;
-    border-right: 0px none;    
-}
-
-/*.ComboBox .ajax__combobox_textboxcontainer input 
-{
-    float: left;
-    padding: 3px;
-    background-color: #ADD8E6;
-    border: solid 1px Blue;
-    border-right: 0px none;
-}*/
-
-/*.ComboBox .ajax__combobox_buttoncontainer button {
-    background-color: #ADD8E6;
-    border: solid 1px Blue;
-}*/
-
-/*.ComboBox .ajax__combobox_itemlist {
-    background-color: #ADD8E6;
-    border: solid 1px Blue;
-}*/
 
 /* Search Page (ComboBox)
 ----------------------------------------------------------*/
@@ -676,6 +631,51 @@ fieldset input[type="submit"]
     margin-top: 20px;
     float: left;     
     clear: both;
+   /* width: 80%;*/
+   padding-left: 30px;
+}
+
+.CustomPanel .labelType1
+{
+    float: left;
+    clear: both;
+    padding: 3px;
+    font-weight: 600;
+    margin-right: 6px;
+    /*margin-left: 12px;*/
+    min-width: 140px;
+}
+
+.CustomPanel .ComboBox .ajax__combobox_textboxcontainer 
+{
+    float: left;
+    clear: both;
+    padding: 3px;
+    /*background-color: #ADD8E6;*/
+    border: solid 3px #2e8dcc;
+    /*border-right: 0px none;*/   
+}
+
+
+.CustomPanel .ComboBox .ajax__combobox_textboxcontainer input 
+{
+    float: left;
+    padding: 3px;
+    padding-left:10px;    
+    /*background-color: #ADD8E6;*/
+    /*border: solid 1px Blue;*/
+    /*border-right: 0px none;*/
+}
+
+.CustomPanel .ComboBox .ajax__combobox_buttoncontainer button {
+    /*background-color: #ADD8E6;*/
+    border: solid 1px #2e8dcc;
+}
+
+.CustomPanel .ComboBox .ajax__combobox_itemlist {
+    /*background-color: #ADD8E6;*/
+    padding-left:10px;
+    border: solid 3px #F1A219;
 }
 
 .CustomPanel .Label
@@ -686,35 +686,6 @@ fieldset input[type="submit"]
     margin-right: 6px;
     min-width: 170px;
 }
-
-/*.CustomPanel .ajax__combobox_textboxcontainer
-{        
-         
-    background-color: #ADD8E6;
-    border: solid 1px Blue;
-    border-right: 0px none;
-}*/
-
-.CustomPanel .ajax__combobox_textboxcontainer inputXXX 
-{    
-    
-    /*padding: 3px;*/      
-    background-color: #ADD8E6;
-    border: solid 1px Blue;
-    border-right: 0px none;
-}
-
-/*.CustomPanel .ajax__combobox_buttoncontainer button 
-{            
-    background-color: #ADD8E6;
-    border: solid 1px Blue;
-}*/
-
-.CustomPanel .ajax__combobox_itemlistXXX
-{
-    background: Azure;       
-}
-
 
 
 /* TJE
