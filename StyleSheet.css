@@ -603,9 +603,17 @@ fieldset input[type="submit"]
     clear: both;
     padding: 3px;
     font-weight: 600;
-    margin-right: 6px;
     /*margin-left: 12px;*/
-    min-width: 140px;
+    /*min-width: 140px;*/
+}
+
+.searchPanel .labelType2
+{
+    float: left;
+    padding: 3px;
+    font-weight: 600;
+    margin-left: 0px;
+    /*min-width: 140px;*/
 }
 
 .searchPanel .dropDownList
@@ -613,9 +621,12 @@ fieldset input[type="submit"]
     float: left;
     padding: 3px;   
     clear: both;
+    min-width: 135px;    
+    margin-bottom: 10px;
+    margin-right: 12px;
     /*padding: 2px 4px 2px 4px;*/
     /*font-weight: 600;*/
-    /*min-width: 135px;*/
+
     /*background-color: #ADD8E6;*/
     border: solid 3px #2e8dcc;
     /*border-right: 0px none;*/
@@ -641,7 +652,6 @@ fieldset input[type="submit"]
     clear: both;
     padding: 3px;
     font-weight: 600;
-    margin-right: 6px;
     /*margin-left: 12px;*/
     min-width: 140px;
 }
@@ -652,7 +662,7 @@ fieldset input[type="submit"]
     clear: both;
     padding: 3px;
     /*background-color: #ADD8E6;*/
-    border: solid 3px #2e8dcc;
+    border: solid 3px #F1A219;
     /*border-right: 0px none;*/   
 }
 

@@ -12,13 +12,21 @@ using Oracle.DataAccess.Types;
 
 
 public partial class Search2 : System.Web.UI.Page
-{
+{    
+
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Session["UserID"] == null)
         {
             Response.Redirect("Default.aspx");
         }
+
+        if (!Page.IsPostBack)
+        {
+            //SearchPeriodDDL.SelectedIndex = 8;    // 1 year default
+
+        }
+
     }
 
     protected void SearchButton_Click(object sender, EventArgs e)
@@ -27,11 +35,51 @@ public partial class Search2 : System.Web.UI.Page
         Response.Redirect("SearchResults.aspx", false);
     }
 
+    protected void SearchPeriodDDL_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        SearchPanel.Visible = false;
+        MessagePanel.Visible = false;
+        ErrorPanel.Visible = false;
+
+        int SearchMonths = 0;
+
+        if (SearchPeriodDDL.SelectedIndex == 0)
+        {
+            SearchPeriodLabel1.Text = String.Empty;
+            SearchPeriodLabel2.Text = String.Empty;
+            SearchPeriodLabel3.Text = String.Empty;
+        }
+        else
+        {
+            SearchMonths = Convert.ToInt32(SearchPeriodDDL.SelectedValue);
+
+            SearchPeriodLabel1.Text = System.DateTime.Now.AddMonths(SearchMonths).ToShortDateString();
+            SearchPeriodLabel2.Text = "to";
+            SearchPeriodLabel3.Text = System.DateTime.Now.ToShortDateString();
+
+            if (SearchParameterDDL.SelectedIndex != 0)
+            {
+                SearchSetup();
+            }
+        }
+    }
+
     protected void SearchParameterDDL_SelectedIndexChanged(object sender, EventArgs e)
     {
         SearchPanel.Visible = false;
-                
-        int SearchMonths = -240;   // Twenty years search window
+        MessagePanel.Visible = false;
+        ErrorPanel.Visible = false;
+
+        if (SearchPeriodDDL.SelectedIndex != 0)
+        {
+            SearchSetup();
+        }
+    }
+
+    protected void SearchSetup()
+    {
+
+        int SearchMonths = Convert.ToInt32(SearchPeriodDDL.SelectedValue);
 
         string ShipperSQL = string.Empty;
         string ConsigneeSQL = string.Empty;
@@ -55,7 +103,7 @@ public partial class Search2 : System.Web.UI.Page
                 ConsigneeSQL = BookingNumber_Consignee;
                 DataText = "BookingNumber";
                 DataValue = "HarbourNumber";
-                SearchQuery(SearchMonths, ShipperSQL, ConsigneeSQL, DataText, DataValue);                
+                SearchQuery(SearchMonths, ShipperSQL, ConsigneeSQL, DataText, DataValue);
                 break;
             //case "PlaceOfDelivery":
             //    PlaceOfDelivery(searchMonths);
@@ -71,7 +119,7 @@ public partial class Search2 : System.Web.UI.Page
                 ConsigneeSQL = ShipperReferenceNumber_Consignee;
                 DataText = "ShipperReferenceNumber";
                 DataValue = "HarbourNumber";
-                SearchQuery(SearchMonths, ShipperSQL, ConsigneeSQL, DataText, DataValue);                
+                SearchQuery(SearchMonths, ShipperSQL, ConsigneeSQL, DataText, DataValue);
                 break;
             case "ConsigneeReferenceNumber":
                 ShipperSQL = ConsigneeReferenceNumber_Shipper;
@@ -85,19 +133,19 @@ public partial class Search2 : System.Web.UI.Page
                 ConsigneeSQL = AirWaybillNumber_Consignee;
                 DataText = "AirWaybillNumber";
                 DataValue = "HarbourNumber";
-                SearchQuery(SearchMonths, ShipperSQL, ConsigneeSQL, DataText, DataValue);                
+                SearchQuery(SearchMonths, ShipperSQL, ConsigneeSQL, DataText, DataValue);
                 break;
             case "NvoBookingNumber":
                 ShipperSQL = NvoBookingNumber_Shipper;
                 ConsigneeSQL = NvoBookingNumber_Consignee;
                 DataText = "NVOBookingNumber";
                 DataValue = "HarbourNumber";
-                SearchQuery(SearchMonths, ShipperSQL, ConsigneeSQL, DataText, DataValue);                
+                SearchQuery(SearchMonths, ShipperSQL, ConsigneeSQL, DataText, DataValue);
                 break;
             default:
                 break;
-        }
-    }
+        } 
+    }       
 
     private void SearchQuery(int SearchMonths, string ShipperSQL, string ConsigneeSQL, string DataText, string DataValue)
     {
@@ -366,6 +414,7 @@ public partial class Search2 : System.Web.UI.Page
 
 
     #endregion
+
 
 
 }
